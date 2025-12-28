@@ -23,7 +23,7 @@ def main():
         קרא את הקובץ data/document.txt,
         חלק אותו לקטעים,
         חפש חלקים רלוונטיים,
-        וענה על השאלה:
+        ועענה על השאלה:
         מה הם הסוגים השונים של בינה מלאכותית?
         """
         
@@ -40,7 +40,7 @@ def main():
         
     except Exception as e:
         print(f"שגיאה: {str(e)}")
-        print("ודא ש-Ollama רץ ושהמודל llama3.2:3b מותקן")
+        print("וודא ש-Ollama רץ ושהמודל llama3.2:3b מותקן")
         sys.exit(1)
 
 if __name__ == "__main__":

@@ -1,11 +1,11 @@
-from langchain_community.llms import Ollama
+from langchain_ollama import OllamaLLM
 from langchain.agents import initialize_agent, AgentType
 from tools import read_file, chunk_text_word_aware, store_and_search_chunks
 
 def build_agent():
     """בונה סוכן RAG עם כלי MCP"""
     # יצירת מודל שפה מקומי
-    llm = Ollama(model="llama3.2:3b", base_url="http://localhost:11434")
+    llm = OllamaLLM(model="llama3.2:3b", base_url="http://localhost:11434")
     
     # רשימת כלי MCP
     tools = [

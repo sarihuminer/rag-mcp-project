@@ -18,7 +18,7 @@ def read_file(path: str) -> str:
     try:
         with open(path, "r", encoding="utf-8") as f:
             content = f.read()
-        print(f"קובץ {path} נקרא בהצלחה ({len(content)} תווים)")
+        print(f"✓ קובץ {path} נקרא בהצלחה ({len(content)} תווים)")
         return content
     except Exception as e:
         return f"שגיאה בקריאת הקובץ: {str(e)}"
@@ -43,7 +43,7 @@ def chunk_text_word_aware(text: str, max_chars: int = 500) -> list[str]:
             chunks.append(chunk)
         start = end + 1
     
-    print(f"הטקסט חולק ל-{len(chunks)} קטעים")
+    print(f"✓ הטקסט חולק ל-{len(chunks)} קטעים")
     return chunks
 
 @tool
@@ -71,7 +71,7 @@ def store_and_search_chunks(question: str, chunks: list[str], k: int = 3) -> str
         )
         
         relevant_chunks = "\n\n".join(results["documents"][0])
-        print(f"נמצאו {len(results['documents'][0])} קטעים רלוונטיים")
+        print(f"✓ נמצאו {len(results['documents'][0])} קטעים רלוונטיים")
         
         return relevant_chunks
         
